@@ -6,7 +6,7 @@
 //   state: 'To Do' | 'In Progress' | 'Done';
 // }
 
-export class Tasks{
+export class Task{
   id: number;
   title: string;
   description: string;

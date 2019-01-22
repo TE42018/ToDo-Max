@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Tasks} from '../models/models';
+import {Task} from '../models/models';
 
 @Component({
   selector: 'app-add-form',
