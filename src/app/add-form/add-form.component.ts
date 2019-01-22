@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Task} from '../models/models';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-add-form',
@@ -8,9 +9,16 @@ import {Task} from '../models/models';
 })
 export class AddFormComponent implements OnInit {
 
-  constructor() { }
+  taskService: TasksService;
+  constructor(taskService: TasksService) { 
+    this.taskService = taskService;
+  }
   
   ngOnInit() {
+  }
+
+  onSubmit(title : string){
+    this.taskService.addTask({title:title});
   }
 
   }

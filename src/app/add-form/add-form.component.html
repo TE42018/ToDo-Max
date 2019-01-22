@@ -3,12 +3,8 @@
     <input type="text">
     <input type="text"> 
  </form>  -->
- <input #newTask (keyup.enter)="addTask(newTask.value)" (blur)="addTask(newTask.value); newTask.value='' ">
- <button (click)="addTask(newTask.Value)">Add Task</button>
+ <input #newTask (keyup.enter)="onSubmit(newTask.value)" (blur)="onSubmit(newTask.value); newTask.value='' ">
+ <button (click)="onSubmit(newTask.Value)">Add Task</button>
 
-    <ul>
-      <li *ngFor="let task of tasks">
-        {{tasks}}
-      </li>
-    </ul>
+    
 
