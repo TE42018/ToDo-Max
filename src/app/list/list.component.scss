@@ -1,0 +1,42 @@
+
+.task {
+  width: 70%;
+  display: flex;
+  padding: 1em;
+  margin: .5em;
+  border: solid 2px;
+  border-radius: 4px;
+
+  .task-nr{
+    flex: 0.5;
+    color: #bb2019;
+  }
+
+  .title {
+    flex: 2;
+    font-size: 20px;
+  }
+  .description {
+    flex: 4;
+    color: #777777;
+  }
+  .state {
+    flex: 1;
+    padding: .5em;
+    border-radius: 4px;
+  }
+  .in-progress {
+  }
+  .urgent {
+    flex: 1;
+    color: #bb2019;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 24px;
+  }
+  #full-task{
+    height: 200px;
+  }
+}
+

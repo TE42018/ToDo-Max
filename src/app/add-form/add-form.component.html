@@ -1,0 +1,14 @@
+  <!-- <form (submit)="onSubmit()" class="form">
+    <input type="text" #box (keyup.enter)="update(box.value)" (blur)="update(box.value)"><p>{{value}}</p></form>
+    <input type="text">
+    <input type="text"> 
+ </form>  -->
+ <input #newTask (keyup.enter)="addTask(newTask.value)" (blur)="addTask(newTask.value); newTask.value='' ">
+ <button (click)="addTask(newTask.Value)">Add Task</button>
+
+    <ul>
+      <li *ngFor="let task of tasks">
+        {{tasks}}
+      </li>
+    </ul>
+

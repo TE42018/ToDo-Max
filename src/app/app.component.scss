@@ -1,0 +1,26 @@
+.header {
+  text-align: center;
+  height: 90px;
+}
+.body {
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    app-list {
+      flex: 1;
+    };
+    button {
+      align-self: flex-end;
+      width: 100px;
+      margin: 1em;
+    }
+  }
+}
