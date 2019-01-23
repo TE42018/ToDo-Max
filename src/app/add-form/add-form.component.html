@@ -3,8 +3,16 @@
     <input type="text">
     <input type="text"> 
  </form>  -->
- <input #newTask (keyup.enter)="onSubmit(newTask.value)" (blur)="onSubmit(newTask.value); newTask.value='' ">
- <button (click)="onSubmit(newTask.Value)">Add Task</button>
 
+ <input #taskTitle placeholder="Title">
+ <input #taskDesc placeholder="Description">
+ <select #taskState> 
+   <option value="" selected disabled>Task state</option>
+   <option value="To Do" >To Do</option>
+   <option value="In Progress">In Progress</option>
+   <option value="On Hold">On Hold</option>
+   <option value="Done">Done</option>
+ </select>
+ <button (click)="newTask(taskTitle.value, taskDesc.value, taskState.value)">Add Task</button>
     
-
+<p>{{taskState.value}}</p>

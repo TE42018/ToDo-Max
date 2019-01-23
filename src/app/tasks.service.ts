@@ -9,19 +9,17 @@ export class TasksService {
   toDoList: Task[];
   id:number = 0;
 
-  addTask(newTask: Task) {
-    newTask.id = ++this.id; 
-      this.toDoList.push(newTask);
-      console.log(this.toDoList)
+  constructor() {
+    this.toDoList = []
   }
 
-  constructor() {
-    this.toDoList = [
-      // { id: 1, title: 'task1', description: 'do this m8', urgent: false, state: 'To Do' }
-    ]
-   }
-  
-  fingrej(){
+  addTask(task: Task) {
+    task.id = ++this.id;
+    this.toDoList.push(task);
+    console.log(this.toDoList)
+  }
+
+  showList(){
     return this.toDoList
   }
 
