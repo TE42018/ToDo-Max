@@ -16,7 +16,7 @@ export class TasksService {
   addTask(task: Task) {
     task.id = ++this.id;
     this.toDoList.push(task);
-    console.log(this.toDoList)
+    
   }
 
   showList(){

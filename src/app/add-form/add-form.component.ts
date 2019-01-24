@@ -17,7 +17,7 @@ export class AddFormComponent implements OnInit {
 
   newTask(title: string, description: string, state: string){
     this.taskService.addTask({title: title, description: description, state: state as Task["state"]})
-    console.log(title, description)
+    console.log()
   }
 
   ngOnInit() {}
